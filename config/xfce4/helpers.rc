@@ -1,4 +1,4 @@
-FileManager=pcmanfm
-TerminalEmulator=xfce4-terminal
+FileManager=thunar
+TerminalEmulator=termite
 WebBrowser=chromium
 
