@@ -13,4 +13,4 @@ fi
 
 /usr/bin/VBoxClient-all
 
-#exec openbox-session
+exec openbox-session
