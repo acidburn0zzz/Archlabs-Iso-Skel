@@ -1,139 +1,116 @@
-# For commands above TEXT check:
-# http://conky.sourceforge.net/config_settings.html
-#
-# For commands available below TEXT check:
-# http://conky.sourceforge.net/variables.html
+--[[
+#=====================================================================================
+#                               ARCHLabs
+# Date    : 01/04/2017
+# Author  : Erik Dubois at http://www.erikdubois.be
+# Version : v1.0.0
+# License : Distributed under the terms of GNU GPL version 2 or later
+# Documentation : http://erikdubois.be/category/linux/aureola/
+#======================================================================================
 
-# Bunsen Labs Conky help threads
-# http://crunchbang.org/forums/viewtopic.php?pid=371424#p371424
 
-# beta tested by: smacz
-# Enjoy! :)
+]]
 
-# pkill -xf "conky -q -c $HOME/.config/conky/BL-Default.conkyrc" &
-###  Begin Window Settings  #####################
-own_window yes
-own_window_type normal
-own_window_transparent yes
-own_window_hints undecorated,below,skip_taskbar,skip_pager,sticky
-own_window_colour 000000
-own_window_class Conky
-own_window_title Bunsen Labs Default Conky
+conky.config = {
 
-### ARGB can be used for real transparency
-### NOTE that a composite manager is required for real transparency.
-### This option will not work as desired (in most cases) in conjunction with
-### own_window_type normal
-# own_window_argb_visual yes # Options: yes or no
+	--Various settings
 
-### When ARGB visuals are enabled, this use this to modify the alpha value
-### Use: own_window_type normal
-### Use: own_window_transparent no
-### Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity.
-# own_window_argb_value 50
+	background = true, 							-- forked to background
+	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring. 
+	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring. 
+	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker) 
+	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
+	net_avg_samples = 2,						-- The number of samples to average for net data 
+	no_buffers = true,							-- Subtract (file system) buffers from used memory? 
+	temperature_unit = 'celsius',				-- fahrenheit or celsius
+	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
+	update_interval = 1,						-- update interval
+	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
+	
 
-minimum_size 200 0  ### width | height
-maximum_width 200
+	--Placement
 
-gap_x 20    ### left | right
-gap_y 45    ### up | down
+	alignment = 'top_right',					-- top-left,top-middle,top-right,bottom-left,bottom-middle,bottom-right,
+												-- middle-left,middle-middle,middle-right,none
+	--Arch Duoscreen
+	--gap_x = -1910,
+	gap_x = 20,									-- pixels between right or left border
+	gap_y = 45,									-- pixels between bottom or left border
+	minimum_height = 200,						-- minimum height of window
+	minimum_width = 200,						-- minimum height of window
+	maximum_width = 200,						-- maximum height of window
 
-alignment tr
-#######################  End Window Settings  ###
-###  Font Settings  #############################
-# Use Xft (anti-aliased font and stuff)
-use_xft yes
-xftfont Monospace:bold:size=9
-#xftfont Liberation Sans:size=9
+	--Graphical
 
-# Alpha of Xft font. Must be a value at or between 1 and 0 ###
-xftalpha 1
-# Force UTF8? requires XFT ###
-override_utf8_locale yes
+	border_inner_margin = 5, 					-- margin between border and text
+	border_outer_margin = 5, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_bar_width = 280,					-- default is 0 - full width					
+	default_bar_height = 10,					-- default is 6
+	default_gauge_height = 25,					-- default is 25
+	default_gauge_width =40,					-- default is 40
+	default_graph_height = 40,					-- default is 25
+	default_graph_width = 153,					-- default is 0 - full width
+	default_shade_color = '#000000',			-- default shading colour
+	default_outline_color = '#000000',			-- default outline colour
+	draw_borders = false,						-- draw borders around text
+	draw_graph_borders = true,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+	stippled_borders = 0,						-- dashing the border
 
-uppercase no
-#########################  End Font Settings  ###
-###  Colour Settings  ###########################
-draw_shades no #yes
-default_shade_color 000000
+	--Textual
+	
+	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font = 'monospace:size=10:regular',  			-- font for complete conky unless in code defined
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
+	max_user_text = 16384,						-- max text in conky default 16384
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = true,							-- shorten units from KiB to k
+	top_name_width = 21,						-- width for $top name value default 15
+	top_name_verbose = false,					-- If true, top name shows the full command line of  each  process - Default value is false.
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 1,								-- alpha of the xft font - between 0-1
 
-draw_outline no # amplifies text if yes
-default_outline_color 000000
+	--Windows
 
-#default_color 656667 # Waldorf original colour
-#default_color 7a7a7a # Flame  & Bunsen Grey
-#default_color 929292 # Labs Grey
-default_color C0C0C0 # Silver
-color0 B0E0E6 # PowderBlue
-color1 778899 # LightSlateGray
-color2 D8BFD8 # Thistle
-color3 9ACD32 # YellowGreen
-color4 FFA07A # LightSalmon
-color5 FFDEAD # NavajoWhite
-color6 00BFFF # DeepSkyBlue
-color7 5F9EA0 # CadetBlue
-color8 BDB76B # DarkKhaki
-color9 CD5C5C # IndianRed
-#######################  End Colour Settings  ###
-###  Borders Section  ###########################
-draw_borders no
-# Stippled borders?
-stippled_borders 5
-# border margins
-border_inner_margin 5
-border_outer_margin 0
-# border width
-border_width 2
-# graph borders
-draw_graph_borders yes #no
-#default_graph_size 15 40
-#######################  End Borders Section  ###
-###  Miscellaneous Section  #####################
-# Boolean value, if true, Conky will be forked to background when started.
-background yes
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 0,				    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = false,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,above,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = true,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'desktop',				    -- if own_window true options are: normal/override/dock/desktop/panel
+	
 
-# Adds spaces around certain objects to stop them from moving other things
-# around, this only helps if you are using a mono font
-# Options: right, left or none
-use_spacer none
+	--Colours
 
-# Default and Minimum size is 256 - needs more for single commands that
-# "call" a lot of text IE: bash scripts
-text_buffer_size 6144
+	default_color = '#C0C0C0',  				-- default color and border color
+	color1 = '#888888', 
+	color2 = '#AAAAAA', 
+	color3 = '#cccccc', 
+	color4 = '#BDBDBD',
+	color5 = '#CCCCCC', 
+	color6 = '#aa0000',
 
-# Subtract (file system) buffers from used memory?
-no_buffers yes
+	--Signal Colours
+	color7 = '#1F7411',  						--green
+	color8 = '#FFA726',  						--orange
+	color9 = '#F1544B',  						--firebrick
+	
 
-# change GiB to G and MiB to M
-short_units yes
+	--Lua
 
-# Like it says, ot pads the decimals on % values
-# doesn't seem to work since v1.7.1
-pad_percents 2
 
-# Imlib2 image cache size, in bytes. Default 4MiB Increase this value if you use
-# $image lots. Set to 0 to disable the image cache.
-imlib_cache_size 0
+};
 
-# Use the Xdbe extension? (eliminates flicker)
-# It is highly recommended to use own window with this one
-# so double buffer won't be so big.
-double_buffer yes
-
-#   Maximum size of user text buffer, i.e. layout below TEXT line in config file
-#  (default is 16384 bytes)
-# max_user_text 16384
-
-# Desired output unit of all objects displaying a temperature. Parameters are
-# either "fahrenheit" or "celsius". The default unit is degree Celsius.
-# temperature_unit Fahrenheit
-
-#################  End Miscellaneous Section  ###
-#### ${font Monospace:bold:size=10}${alignc}${execpi 600 $HOME/.config/conky/scripts/bunsenweather.sh}
-update_interval 1
-
-TEXT
-${color}${alignc}S Y S T E M    I N F O
+conky.text = [[
+${alignc}S Y S T E M    I N F O
 ${hr}
 Host:${alignr}${nodename}
 Uptime:${alignr}${uptime}
@@ -168,3 +145,5 @@ ${hr}
 [S] + v${alignr}Volume Control
 [S] + x${alignr}Logout
 [PrtSc]${alignr}Screenshot
+
+]];
