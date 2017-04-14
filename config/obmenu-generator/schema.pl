@@ -4,16 +4,16 @@
 
 =for comment
 
-    item:      add an item inside the menu               {item => ["command", "label", "icon"]},
+    item:      add an item inside the menu                {item => ["command", "label", "icon"]},
     cat:       add a category inside the menu             {cat => ["name", "label", "icon"]},
     sep:       horizontal line separator                  {sep => undef}, {sep => "label"},
-    pipe:      a pipe menu entry                         {pipe => ["command", "label", "icon"]},
-    file:      include the content of an XML file        {file => "/path/to/file.xml"},
+    pipe:      a pipe menu entry                          {pipe => ["command", "label", "icon"]},
+    file:      include the content of an XML file         {file => "/path/to/file.xml"},
     raw:       any XML data supported by Openbox          {raw => q(xml data)},
-    begin_cat: begin of a category                  {begin_cat => ["name", "icon"]},
-    end_cat:   end of a category                      {end_cat => undef},
-    obgenmenu: generic menu settings                {obgenmenu => ["label", "icon"]},
-    exit:      default "Exit" action                     {exit => ["label", "icon"]},
+    begin_cat: begin of a category                        {begin_cat => ["name", "icon"]},
+    end_cat:   end of a category                          {end_cat => undef},
+    obgenmenu: generic menu settings                      {obgenmenu => ["label", "icon"]},
+    exit:      default "Exit" action                      {exit => ["label", "icon"]},
 
 =cut
 
