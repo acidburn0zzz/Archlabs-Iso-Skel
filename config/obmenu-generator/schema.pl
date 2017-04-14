@@ -109,7 +109,7 @@ our $SCHEMA = [
     {end_cat => undef},
 
      # Preferences
-    {begin_cat => ['System Settings', 'theme']},
+    {begin_cat => ['System Settings', 'settings']},
         {item => ['pamac-manager',  'Pamac Package Manager','pamac']},
         {item => ['pamac-updater',  'Pamac Package Updater','pamac']},
         {sep => undef},
