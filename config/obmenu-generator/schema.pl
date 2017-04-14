@@ -40,7 +40,7 @@ our $SCHEMA = [
     {item => ['exo-open --launch WebBrowser ',                                      'Web Browser',       'firefox']},
     {item => ['exo-open --launch FileManager',                                      'File Manager',      'file-manager']},
     {item => ['geany',                                                              'Text Editor',       'geany']},
-    {item => ['vlc',  			                                                    'Media Player',      'vlc']},
+    {item => ['vlc',                                                                'Media Player',      'vlc']},
     {sep => undef},
 
     #{sep => 'Applications'},
