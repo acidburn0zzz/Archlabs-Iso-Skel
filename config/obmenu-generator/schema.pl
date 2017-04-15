@@ -100,6 +100,7 @@ our $SCHEMA = [
         {item => ['gksudo lightdm-gtk-greeter-settings',    'LightDM Appearance',       'theme']},
         {item => ['nitrogen',                               'Choose wallpaper',         'nitrogen']},
         {item => ['xfce4-notifyd-config',                   'Notifications',            'notifications']},
+        {sep => undef},
         {item => ['exo-preferred-applications',             'Preferred Applications',   'preferred-applications']},
         {item => ['xfce4-power-manager-settings',           'Power Management',         'power']},
         {item => ["dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'", 'Dmenu', 'alacarte']},
