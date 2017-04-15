@@ -1,7 +1,2 @@
 0
-/usr/share/backgrounds/groovy-wood.png
-/usr/share/backgrounds/math.jpg
-/usr/share/backgrounds/Wall2.png
-/usr/share/backgrounds/Blur_wall-Archlabs.png
-/usr/share/backgrounds/standard-archlabs-silver.png
 
