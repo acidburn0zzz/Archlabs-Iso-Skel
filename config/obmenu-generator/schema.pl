@@ -81,7 +81,7 @@ our $SCHEMA = [
             {item => ["$editor ~/.config/openbox/rc.xml",       'Edit rc.xml',                   'text-xml']},
             {item => ["$editor ~/.config/openbox/autostart",    'Edit autostart',                'text-xml']},
             {sep => undef},
-            {item => ['obmenu',                                 'GUI Obmenu',                    'theme']},
+            {item => ['obmenu',                                 'GUI Menu Editor',                    'theme']},
             {item => ['obconf',                                 'GUI Config Tool',               'theme']},
             {item => ['obkey',                                  'GUI Keybinds',                  'theme']},
 
