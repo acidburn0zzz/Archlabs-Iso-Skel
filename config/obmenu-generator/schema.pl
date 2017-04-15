@@ -65,7 +65,7 @@ our $SCHEMA = [
 
     {sep => undef},
     {pipe => ['al-places-pipemenu',         'Places',       'folder']},
-    {pipe => ['al-recent-files-pipemenu',   'Recent files', 'folder-recent']},
+    {pipe => ['al-recent-files-pipemenu',   'Recent Files', 'folder-recent']},
 
     ## Custom advanced settings
     #{sep => "Settings"},
