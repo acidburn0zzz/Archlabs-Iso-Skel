@@ -11,6 +11,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-/usr/bin/VBoxClient-all
-
-exec openbox-session
+if [systemd-detect-virt = "oracle"];
+	/usr/bin/VBoxClient-all
+fi
