@@ -5,7 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
+alias ls='ls --color=auto'
+alias merge="xrdb -merge ~/.Xresources"
+alias pacman="pacman --color auto"
+alias syua="pacaur -Syu"
+alias syu="sudo pacman -Syu"
 
 neofetch
