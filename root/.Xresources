@@ -1,7 +1,8 @@
 ! ------------------------------------------------------------------------------
 ! xterm standard archlabs theme
 ! ------------------------------------------------------------------------------
-
+! https://critical.ch/xterm/
+! ------------------------------------------------------------------------------
 
 xterm*font: 7x13
 xterm*faceName: Monospace:size=12:antialias=false
@@ -64,6 +65,10 @@ URxvt.colorUL:      #87afd7
 
 
 ! colors
+! colors 0-7 are normal
+! colors 8-15 are light
+! color 0 relates to 8 etc...
+
 URxvt*color0: #2e3436
 URxvt*color1: #cc0000
 URxvt*color2: #4e9a06
