@@ -2,6 +2,7 @@
 application/xml=geany.desktop;
 inode/directory=Thunar.folder.handler.desktop;
 image/png=gpicview.desktop;
+image/gif=viewnior.desktop;
 
 
 [Default Applications]
