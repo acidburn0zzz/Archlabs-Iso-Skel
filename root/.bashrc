@@ -26,6 +26,7 @@ alias fgrep='fgrep --color=auto'
 
 #readable output
 alias mount='mount |column -t'
+alias df='df -h'
 
 alias merge="xrdb -merge ~/.Xresources"
 
