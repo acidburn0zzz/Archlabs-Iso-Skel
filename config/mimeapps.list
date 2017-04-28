@@ -33,10 +33,12 @@ application/x-cd-image=gnome-disk-image-mounter.desktop;
 application/x-bittorrent=transmission-gtk.desktop;
 text/x-changelog=geany.desktop;
 application/pdf=evince.desktop;
-
+application/pdf=evince.desktop;
+audio/mpeg=deadbeef.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 text/plain=geany.desktop
 application/x-shellscript=geany.desktop
+audio/mpeg=deadbeef.desktop
