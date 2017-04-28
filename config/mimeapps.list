@@ -37,9 +37,23 @@ text/x-lua=geany.desktop;
 application/x-tint2-theme=tint2conf.desktop;
 application/pdf=evince.desktop;
 audio/mpeg=deadbeef.desktop;
-image/jpeg=ristretto.desktop;
+image/jpeg=gpicview.desktop;ristretto.desktop;
 application/x-asp=geany.desktop;
 video/x-msvideo=vlc.desktop;
+application/x-ms-dos-executable=org.gnome.FileRoller.desktop;
+video/x-matroska=vlc.desktop;
+application/vnd.ms-powerpoint=libreoffice-impress.desktop;
+application/vnd.ms-publisher=libreoffice-draw.desktop;
+application/vnd.visio=inkscape.desktop;
+video/mpeg=vlc.desktop;
+video/mp4=vlc.desktop;
+image/vnd.adobe.photoshop=gimp.desktop;
+application/x-php=geany.desktop;
+video/quicktime=vlc.desktop;
+audio/x-wav=deadbeef.desktop;
+video/x-ms-wmv=vlc.desktop;
+application/pkix-cert=gcr-viewer.desktop;
+application/zip=org.gnome.FileRoller.desktop;
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop
