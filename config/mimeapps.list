@@ -32,6 +32,8 @@ application/x-yaml=geany.desktop;
 application/x-cd-image=gnome-disk-image-mounter.desktop;
 application/x-bittorrent=transmission-gtk.desktop;
 text/x-changelog=geany.desktop;
+application/pdf=evince.desktop;
+
 
 [Default Applications]
 x-scheme-handler/http=firefox.desktop
