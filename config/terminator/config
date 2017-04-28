@@ -11,6 +11,7 @@
     [[[window0]]]
       parent = ""
       type = Window
+      size = 900, 600
 [plugins]
 [profiles]
   [[default]]
