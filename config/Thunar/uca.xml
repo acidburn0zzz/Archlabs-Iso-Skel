@@ -14,7 +14,7 @@
 	<icon>preferences-desktop-wallpaper</icon>
 	<name>Set wallpaper dual</name>
 	<unique-id>1489091347351863-5</unique-id>
-	<command>nitrogen --set-zoom-fill %f</command>
+	<command>nitrogen --save --set-zoom-fill %f</command>
 	<description></description>
 	<patterns>*</patterns>
 	<image-files/>
@@ -23,7 +23,7 @@
 	<icon>preferences-desktop-wallpaper</icon>
 	<name>Set wallpaper single</name>
 	<unique-id>1489091195323731-3</unique-id>
-	<command>nitrogen --set-zoom-fill  --head=0 %f  &amp;&amp; nitrogen --set-zoom-fill  --head=1 %f</command>
+	<command>nitrogen --save --set-zoom-fill  --head=0 %f  &amp;&amp; nitrogen --set-zoom-fill  --head=1 %f</command>
 	<description></description>
 	<patterns>*</patterns>
 	<image-files/>
