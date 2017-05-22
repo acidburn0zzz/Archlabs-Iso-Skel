@@ -29,7 +29,7 @@ my $editor = $CONFIG->{editor};
 
 
 our $SCHEMA = [
-
+	{sep => "ARCHLabs"},
     #          COMMAND                 LABEL                ICON
     #{item => ['xdg-open .',        'File Manager',      'file-manager']},
     #{item => ['xterm',             'Terminal',          'terminal']},
