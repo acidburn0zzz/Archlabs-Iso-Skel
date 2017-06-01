@@ -145,5 +145,6 @@ ${hr}
 [S] + v${alignr}Volume Control
 [S] + x${alignr}Logout
 [PrtSc]${alignr}Screenshot
-
+${hr}
+${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
 ]];
