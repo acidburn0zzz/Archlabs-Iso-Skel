@@ -42,5 +42,7 @@ alias pks="packer -S"
 alias pksn="packer -S --noconfirm --noedit"
 alias pksyu="packer -Syu  --noconfirm --noedit"
 
+alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
+
 
 neofetch
