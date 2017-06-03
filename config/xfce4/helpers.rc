@@ -1,4 +1,4 @@
 FileManager=Thunar
-TerminalEmulator=termite
+TerminalEmulator=custom-TerminalEmulator
 WebBrowser=chromium
 
