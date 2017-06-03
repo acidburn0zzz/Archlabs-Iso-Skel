@@ -4,16 +4,16 @@
 
 =for comment
 
-    item:      add an item inside the menu                {item => ["command", "label", "icon"]},
+    item:      add an item inside the menu               {item => ["command", "label", "icon"]},
     cat:       add a category inside the menu             {cat => ["name", "label", "icon"]},
     sep:       horizontal line separator                  {sep => undef}, {sep => "label"},
-    pipe:      a pipe menu entry                          {pipe => ["command", "label", "icon"]},
-    file:      include the content of an XML file         {file => "/path/to/file.xml"},
+    pipe:      a pipe menu entry                         {pipe => ["command", "label", "icon"]},
+    file:      include the content of an XML file        {file => "/path/to/file.xml"},
     raw:       any XML data supported by Openbox          {raw => q(xml data)},
-    begin_cat: begin of a category                        {begin_cat => ["name", "icon"]},
-    end_cat:   end of a category                          {end_cat => undef},
-    obgenmenu: generic menu settings                      {obgenmenu => ["label", "icon"]},
-    exit:      default "Exit" action                      {exit => ["label", "icon"]},
+    begin_cat: beginning of a category              {begin_cat => ["name", "icon"]},
+    end_cat:   end of a category                      {end_cat => undef},
+    obgenmenu: generic menu settings                {obgenmenu => ["label", "icon"]},
+    exit:      default "Exit" action                     {exit => ["label", "icon"]},
 
 =cut
 
@@ -26,7 +26,6 @@ require "$ENV{HOME}/.config/obmenu-generator/config.pl";
 
 ## Text editor
 my $editor = $CONFIG->{editor};
-
 
 our $SCHEMA = [
 	{sep => "ARCHLabs"},
@@ -81,7 +80,7 @@ our $SCHEMA = [
             {item => ["$editor ~/.config/openbox/rc.xml",       'Edit rc.xml',                   'text-xml']},
             {item => ["$editor ~/.config/openbox/autostart",    'Edit autostart',                'text-xml']},
             {sep => undef},
-            {item => ['obmenu3',                                 'GUI Menu Editor',                    'theme']},
+            {item => ['obmenu3',                                'GUI Menu Editor',               'theme']},
             {item => ['obconf',                                 'GUI Config Tool',               'theme']},
             {item => ['obkey',                                  'GUI Keybinds',                  'theme']},
 
@@ -96,15 +95,18 @@ our $SCHEMA = [
         {sep => undef},
         {item => ['lxappearance',                           'Lxappearance',             'theme']},
         {item => ['xfce4-appearance-settings',              'Xfce4 Appearance',         'preferences-desktop-theme']},        
-        {item => ['oomox-gui',                              'Oomox',                    'display']},
         {item => ['gksudo lightdm-gtk-greeter-settings',    'LightDM Appearance',       'theme']},
+        {item => ["gksudo geany /etc/slim.conf",            'Slim Appearance',          'theme']},        
         {item => ['nitrogen',                               'Choose wallpaper',         'nitrogen']},
         {item => ['xfce4-notifyd-config',                   'Notifications',            'notifications']},
+        {item => ['pavucontrol',                            'Pulseaudio Preferences',   'multimedia-volume-control']},        
+        {item => ['oomox-gui',                              'Oomox',                    'preferences-desktop-theme']},       
         {sep => undef},
         {item => ['exo-preferred-applications',             'Preferred Applications',   'preferred-applications']},
         {item => ['xfce4-power-manager-settings',           'Power Management',         'power']},
+        {item => ['xfce4-settings-manager',                 'Xfce4 Settings Manager',   'preferences-desktop']},
         {item => ["dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'", 'Dmenu', 'alacarte']},
-        {item => ['arandr',                                 'ARandR Screen Layout Editor', 'display']},
+        {item => ['arandr',                                 'Screen Layout Editor',     'display']},
         {item => ['system-config-printer',                  'Printing',                 'printer']},        
         #{pipe => ['al-printing-pipemenu', 'Printing', 'printer']},
     {end_cat => undef},
@@ -138,7 +140,8 @@ our $SCHEMA = [
     {sep => undef},
     {pipe => ['al-help-pipemenu',              'Help &amp; Resources',              'info']},
     {pipe => ['al-kb-pipemenu',                'Display Keybinds',                  'cs-keyboard']},
-
+    ## The xscreensaver lock command
+    #{item => ['xscreensaver-command -lock', 'Lock', 'system-lock-screen']},
     {sep => undef},
     {item => ['slimlock',                      'Lock Screen',                       'log-out']},
     {item => ['oblogout',                      'Exit Openbox',                      'exit']},
