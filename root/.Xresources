@@ -43,6 +43,9 @@ xterm*boldMode: false
 URxvt*saveline:         15000
 URxvt*termName:         rxvt-256color
 URxvt*iso14755:         false
+! for this icon to load in panels and plank you need to follow the steps described here
+! http://archlabs.prophpbb.com/post1220.html
+URxvt*iconFile:  		/usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
 
 ! appearance
 URxvt*depth:            32
