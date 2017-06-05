@@ -28,7 +28,7 @@ require "$ENV{HOME}/.config/obmenu-generator/config.pl";
 my $editor = $CONFIG->{editor};
 
 our $SCHEMA = [
-	{sep => "ARCHLabs"},
+	{sep => "ArchLabs"},
     #          COMMAND                 LABEL                ICON
     #{item => ['xdg-open .',        'File Manager',      'file-manager']},
     #{item => ['xterm',             'Terminal',          'terminal']},
