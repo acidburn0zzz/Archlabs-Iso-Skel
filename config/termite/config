@@ -46,7 +46,7 @@ background = rgba(63, 63, 63, 0.8)
 # Arc theme
 #background = rgba(64, 69, 82, 0.8)
 
-#Standard Archlabs coloring
+#Standard ArchLabs coloring
 # colors from color0 to color254 can be set
 color0  = #282a2e
 color1  = #a54242
