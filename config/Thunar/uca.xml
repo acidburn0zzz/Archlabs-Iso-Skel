@@ -76,4 +76,13 @@
 	<patterns>*</patterns>
 	<directories/>
 </action>
+<action>
+	<icon>imagemagick</icon>
+	<name>Convert png to jpg</name>
+	<unique-id>1496724866891644-6</unique-id>
+	<command>convert %f -quality 90 %f.jpg</command>
+	<description>Convert png to jpg</description>
+	<patterns>*.png</patterns>
+	<image-files/>
+</action>
 </actions>
