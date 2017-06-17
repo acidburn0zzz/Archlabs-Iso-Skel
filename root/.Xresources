@@ -33,6 +33,7 @@ xterm*color15: rgb:c5/c8/c6
 xterm*boldMode: false
 
 
+
 ! ------------------------------------------------------------------------------
 ! URxvt standard archlabs theme
 ! ------------------------------------------------------------------------------
@@ -51,52 +52,48 @@ URxvt*iconFile:  		/usr/share/icons/Sardi-Mono/scalable/apps/terminal.svg
 URxvt*depth:            32
 !URxvt*background:      rgba:0000/0000/0000/AAAA
 !URxvt*background:      [80]#404552
-URxvt*background:       [80]#3F3F3F
-URxvt*foreground:       #c5c8c6
+URxvt*background:       [80]#3F424A
+URxvt*foreground:       #F8F8FF
 URxvt.underlineColor:   #4682B4
 URxvt.highlightColor:   #4682B4
 URxvt.throughColor:     Blue
-URxvt*cursorColor:      Green
+URxvt*cursorColor:      #c5c8c6
 URxvt*cursorColor2:     Black
 URxvt*scrollBar:        false
 URxvt*scrollBar_right:  false
 URxvt*internalBorder:   0
 URxvt*externalBorder:   0
-URxvt.colorIT:      #87af5f
-URxvt.colorBD:      #d7d7d7
-URxvt.colorUL:      #87afd7
+URxvt.colorIT:      	#87af5f
+URxvt.colorBD:      	#c5c8c6
+URxvt.colorUL:      	#87afd7
 
 
 ! colors
-! colors 0-7 are normal
-! colors 8-15 are light
-! color 0 relates to 8 etc...
-
-URxvt*color0: #2e3436
-URxvt*color1: #cc0000
-URxvt*color2: #4e9a06
-URxvt*color3: #c4a000
-URxvt*color4: #3465a4
-URxvt*color5: #75507b
-URxvt*color6: #0b939b
-URxvt*color7: #d3d7cf
-URxvt*color8: #555753
-URxvt*color9: #ef2929
-URxvt*color10: #8ae234
-URxvt*color11: #fce94f
-URxvt*color12: #81a2be
-URxvt*color13: #ad7fa8
-URxvt*color14: #00f5e9
-URxvt*color15: #eeeeec
+URxvt*color0: #3f3f3f
+URxvt*color1: #ac3c3c
+URxvt*color2: #60b48a
+URxvt*color3: #dfaf8f
+URxvt*color4: #506070
+URxvt*color5: #dc8cc3
+URxvt*color6: #8cd0d3
+URxvt*color7: #dcdccc
+URxvt*color8: #709080
+URxvt*color9: #da6e6e
+URxvt*color10: #c3bf9f
+URxvt*color11: #f0dfaf
+URxvt*color12: #94bff3
+URxvt*color13: #ec93d3
+URxvt*color14: #93e0e3
+URxvt*color15: #ffffff
 
 ! fonts
-URxvt*letterSpace: 	    		-1
+URxvt*letterSpace: 	    		-2
 !Xft.size:						12
-URxvt*font:                 	xft:Monospace:regular:size=12
-URxvt*imFont:               	xft:Monospace:regular:size=12
-URxvt*boldFont:             	xft:Monospace:bold:size=12
-URxvt*italicFont:           	xft:Monospace:italic:size=12
-URxvt*boldItalicFont:     		xft:Monospace:regular:size=12
+URxvt*font:                 	xft:Monospace:regular:size=13
+URxvt*imFont:               	xft:Monospace:regular:size=13
+URxvt*boldFont:             	xft:Monospace:bold:size=13
+URxvt*italicFont:           	xft:Monospace:italic:size=13
+URxvt*boldItalicFont:     		xft:Monospace:regular:size=13
 ! run :.!fc-list | grep <font-name>
 
 ! perl extensions
@@ -115,7 +112,7 @@ URxvt.keysym.M-u:       perl:url-select:select_next
 URxvt.urlLauncher:      firefox
 URxvt.underlineURLs:    true
 URxvt.urlButton:        1
-URxvt.geometry: 		90x34
+URxvt.geometry: 		90x30
 
 ! tabbed
 URxvt.tabbed.tabbar-fg: 4
@@ -123,6 +120,7 @@ URxvt.tabbed.tabbar-bg: 16
 URxvt.tabbed.tab-fg:    15
 URxvt.tabbed.tab-bg:    4
 URxvt*buffered:         false
+
 
 
 
