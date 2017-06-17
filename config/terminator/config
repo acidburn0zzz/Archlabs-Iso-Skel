@@ -1,5 +1,5 @@
 [global_config]
-  title_font = Monospace 11
+  title_font = Monospace 13
   title_transmit_bg_color = "#000000"
   title_use_system_font = False
 [keybindings]
@@ -10,17 +10,17 @@
       type = Terminal
     [[[window0]]]
       parent = ""
-      type = Window
       size = 900, 600
+      type = Window
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#3f3f3f"
+    background_color = "#3f424a"
     background_darkness = 0.8
     background_type = transparent
-    cursor_color = "#aaaaaa"
+    cursor_color = "#c5c8c6"
     font = Monospace 12
-    foreground_color = "#eeeeec"
+    foreground_color = "#f8f8ff"
     icon_bell = False
     scrollback_lines = 15000
     scrollbar_position = hidden
