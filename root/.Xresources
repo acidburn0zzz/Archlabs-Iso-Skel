@@ -195,6 +195,7 @@ rofi.lines:             18
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! Copyright: 2017 leofa
+! more color themes @ https://github.com/DaveDavenport/rofi-themes
 ! ------------------------------------------------------------------------------
 ! "Color scheme for normal row" Set from: File
 rofi.color-normal:                   argb:31d1f21, #c4cbd4, argb:96404552, #4084d6, #f9f9f9
