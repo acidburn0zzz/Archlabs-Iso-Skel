@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export HISTCONTROL=ignoreboth:erasedups
+
 PS1='[\u@\h \W]\$ '
 
 #list
@@ -46,3 +48,4 @@ alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
 
 
 neofetch
+EDITOR=nano
