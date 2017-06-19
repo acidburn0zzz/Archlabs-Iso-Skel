@@ -99,6 +99,7 @@ our $SCHEMA = [
         {item => ["gksudo geany /etc/slim.conf",            'Slim Appearance',          'theme']},
         {item => ['rofi-theme-selector',                    'Rofi Appearance',          'theme']},                 
         {item => ['nitrogen',                               'Choose wallpaper',         'nitrogen']},
+        {sep => undef},        
         {item => ['xfce4-notifyd-config',                   'Notifications',            'notifications']},
         {item => ['pavucontrol',                            'Pulseaudio Preferences',   'multimedia-volume-control']},        
         {item => ['oomox-gui',                              'Oomox',                    'preferences-desktop-theme']},       
