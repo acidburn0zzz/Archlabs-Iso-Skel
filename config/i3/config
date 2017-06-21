@@ -555,10 +555,12 @@ bindsym control+mod1+c exec catfish;focus
 #slimlock
 #archlabs conflict
 #bindsym $mod+l exec slimlock
+#use super + pause/break to get to slimlock
 
 #rofi theme selector
 #archlabs conflict
 #bindsym $mod+r exec rofi-theme-selector
+bindsym control+mod1+r exec rofi-theme-selector
 
 #deadbeef
 #archlabs conflict
@@ -570,12 +572,7 @@ bindsym control+mod1+c exec catfish;focus
 
 #pavucontrol
 #archlabs conflict
-#bindsym $mod+v exec pavucontrol;workspace 7; focus
-
-#xkill
-#archlabs conflict
-#not working
-bindsym $mod+Escape exec xkill
+bindsym control+mod1+u exec pavucontrol
 
 # start xfce-appfinder
 #archlabs does not seem to work
