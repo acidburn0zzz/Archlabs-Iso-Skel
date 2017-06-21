@@ -241,7 +241,7 @@ bindsym $mod+Shift+Right move right
 
 ################### TILING PARAMETERS ##############################
 
-# orientation for new workspaces 
+# orientation for new workspaces
 default_orientation horizontal
 
 # split in horizontal orientation
@@ -251,6 +251,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
+# Super + F in archlabs is execute thunar
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
@@ -344,16 +345,16 @@ font pango:Noto Mono Regular 13
 ################### MENU ######################
 
 # start dmenu
-bindsym $mod+shift+d exec dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14' 
+bindsym $mod+shift+d exec dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
 # start xfce-appfinder
 bindsym mod1+F3 exec xfce4-appfinder
 
 # start rofi full
-bindsym CTRL+space exec rofi -modi drun,run -show drun -fullscreen -font "Noto Sans 13"
+bindsym $mod+F11 exec rofi -show run -fullscreen -font "Noto Sans 13"
 
 # start rofi small
-bindsym CTRL+SHIFT+space exec rofi -modi drun,run -show drun -font "Noto Sans 13"
+bindsym $mod+F12 exec rofi -show run -font "Noto Sans 13"
 
 # gmrun
 bindsym mod1+F2 exec gmrun
@@ -449,11 +450,11 @@ assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]   
 assign [class="Xed|xed|Brackets|Atom|Code|Geany"]                                   → 2
 assign [class="Inkscape"]                                                           → 3
 assign [class="Gimp"]                                                               → 4
-assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer"]                      → 5
+assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer|Nitrogen"]             → 5
 assign [class="Meld"]                                                               → 5
 assign [class="feh|gthumb|Gthumb|eog|Eog|Pinta|pixeluvo|Pixeluvo"]                  → 5
 assign [class="Vlc|vlc"]                                                            → 6
-assign [class="Vmplayer|VirtualBox"]                                                → 7
+assign [class="Vmplayer|VirtualBox|Xfce4-settings-manager"]                         → 7
 assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
 assign [class="Geary|Evolution"]                                                    → 9
 assign [class="Spotify|spotify"]                                                    → 10
@@ -479,14 +480,13 @@ exec insync start
 exec volumeicon
 #variety
 exec variety
-
 # clipit
 exec clipit
 
 
 # USER APPLICATIONS
 
-#distro dependent applications are at bottom of config like filemanager ...
+#distro dependent applications are at bottom of config like filemanager, terminal ...
 
 #browsers
 exec vivaldi-snapshot
@@ -500,9 +500,10 @@ exec --no-startup-id spotify
 for_window [class="Spotify"] focus
 
 #Conky
-#exec ~/.config/i3/start-conkys.sh
+exec conky -c ~/.config/i3/system-overview
+
 #exec --no-startup-id evolution
-#exec --no-startup-id conky
+
 
 
 
@@ -510,29 +511,30 @@ for_window [class="Spotify"] focus
 #mod1 = ALT
 
 #workspace 1 related
-bindsym $mod+F1 exec firefox;workspace 1;focus
+bindsym $mod+F1 exec exo-open --launch webbrowser;workspace 1;focus
+bindsym $mod+w exec exo-open --launch webbrowser;workspace 1;focus
 bindsym control+mod1+f exec firefox;workspace 1; focus
-bindsym control+mod1+v exec vivaldi-stable;workspace 1; focus
+bindsym control+mod1+v exec vivaldi-snapshot;workspace 1; focus
+bindsym control+mod1+g exec chromium;workspace 1;focus
 
 #workspace 2 related
 #sublime text see at bottom distro dependent
 
 #workspace 3 related
 bindsym $mod+F3 exec inkscape;workspace 3;focus
-bindsym control+mod1+i exec inkscape;workspace 3;focus
 
 #workspace 4 related
 bindsym $mod+F4 exec gimp;workspace 4;focus
-bindsym control+mod1+g exec gimp;workspace 4;focus
 
 #workspace 5 related
 bindsym $mod+F5 exec meld;workspace 5;focus
-bindsym control+mod1+m exec meld;workspace 5;focus
+bindsym control+mod1+i exec nitrogen;workspace 5;focus
 
 #workspace 6 related
 bindsym $mod+F6 exec vlc;workspace 6;focus
 
 #workspace 7 related
+bindsym $mod+F7 exec virtualbox;workspace 7;focus
 
 #workspace 8 related
 # filemanagers see at bottom distro dependent
@@ -549,6 +551,35 @@ bindsym control+mod1+s exec spotify;workspace 10;focus
 
 #catfish
 bindsym control+mod1+c exec catfish;focus
+
+#slimlock
+#archlabs conflict
+#bindsym $mod+l exec slimlock
+
+#rofi theme selector
+#archlabs conflict
+#bindsym $mod+r exec rofi-theme-selector
+
+#deadbeef
+#archlabs conflict
+#bindsym $mod+m exec deadbeef;workspace 10; focus
+
+#htop
+#archlabs conflict
+#bindsym $mod+h exec htop;workspace 7; focus
+
+#pavucontrol
+#archlabs conflict
+#bindsym $mod+v exec pavucontrol;workspace 7; focus
+
+#xkill
+#archlabs conflict
+#not working
+bindsym $mod+Escape exec xkill
+
+# start xfce-appfinder
+#archlabs does not seem to work
+bindsym control+mod1+a exec xfce4-appfinder
 
 ################### SHORTCUTS WORKSPACES ######################
 
@@ -571,10 +602,10 @@ for_window [urgent=latest] focus
 
 
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
-#bindsym Print exec scrot '%Y-%m-%d-%H-%M-%S.jpg' -e 'mv $f ~/Pictures/' && sleep 1 && exec notify-send 'screenshot has been saved in ~/Pictures'
-bindsym Control+Print exec gnome-screenshot -i
+bindsym control+Print exec xfce4-screenshooter
+bindsym Control+Shift+Print exec gnome-screenshot -i
 #bindsym shift+Print exec shutter
-#bindsym control+Print exec xfce4-screenshooter
+
 
 
 ################### FLOATING OR TILED ######################
@@ -604,9 +635,10 @@ for_window [window_role="setup"] floating enable
 for_window [title="^Terminator Preferences$"] floating enable
 #for_window [class="Font-manager"] floating enable
 for_window [class="System-config-printer.py"] floating enable
-for_window [class="Nitrogen"] floating enable
-for_window [title="Copying"] floating enable  
-for_window [title="Deleting"] floating enable  
+for_window [class="Blueberry.py"] floating enable
+for_window [class="Nitrogen"] floating disable
+for_window [title="Copying"] floating enable
+for_window [title="Deleting"] floating enable
 for_window [title="Moving"] floating enable
 for_window [class="Unetbootin.elf"] floating enable
 for_window [class="Galculator"] floating enable
@@ -620,6 +652,8 @@ for_window [class="Xfce4-settings-manager"] floating disable
 for_window [class="Gnome-control-center"] floating disable
 for_window [class="Gnome-terminal"] focus
 for_window [class="Termite"] focus
+
+
 
 #Popups during fullscreen mode
 popup_during_fullscreen smart
@@ -676,8 +710,8 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioStop exec playerctl stop
-#bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause" 
-#bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next" 
+#bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+#bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 #bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 #bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
 
@@ -686,7 +720,7 @@ bindsym XF86AudioStop exec playerctl stop
 ################### BAR ######################
 
 
-# bar toggle, hide or show 
+# bar toggle, hide or show
 bindsym $mod+b bar mode toggle
 
 
@@ -698,6 +732,7 @@ hide_edge_borders both
 bindsym $mod+shift+b exec i3-msg border toggle
 
 #changing border style
+#super+t in archlabs is starting terminal
 bindsym $mod+t border normal
 bindsym $mod+y border 1pixel
 bindsym $mod+u border none
@@ -724,7 +759,7 @@ exec setxkbmap be
 
 
 # get the mouse out of the way with unclutter
-#exec unclutter 
+#exec unclutter
 
 
 
@@ -740,9 +775,9 @@ bar {
     #you can change the place via xrandr
     #output DVI-0
 
-# OPTION 1 : i3status  
+# OPTION 1 : i3status
 
-    # type status_command i3status without the config file and 
+    # type status_command i3status without the config file and
     # you will get the standard i3status bar
     # this is the standard statusbar with my personal settings
 
@@ -769,10 +804,10 @@ status_command i3blocks -c ~/.config/i3/i3blocks.conf
     # start-conky-i3statusbar.sh is started and conky will follow
     # documentation : https://i3wm.org/docs/user-contributed/conky-i3bar.html
     # conky configuration is in conky-i3statusbar
-        
+
 #status_command ~/.config/i3/start-conky-i3statusbar.sh
 
-   
+
 colors {
         background #2F2F2F
         statusline #eeeeee
@@ -785,7 +820,7 @@ colors {
         }
 
     }
-    
+
 
 # DarkGrey background with white text - not focus grey background - black text
 # Windows decoration colors
@@ -858,7 +893,7 @@ client.urgent           #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
 # class                    border  backgr. text
 # client.focused           #2B6473 #2B6473 #FFA000
 # client.focused_inactive  #004050 #004050 #FFA000
-# client.unfocused         #004050 #004050 #cccccc 
+# client.unfocused         #004050 #004050 #cccccc
 # client.urgent            #900000 #900000 #ffffff
 
 
@@ -884,7 +919,7 @@ client.urgent           #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
 # packer i3-gaps-next-git --noedit
 
 for_window [class="^.*"] border pixel 5
-gaps inner 10 
+gaps inner 10
 gaps outer 5
 #smart_gaps on
 #smart_borders on
@@ -973,11 +1008,11 @@ bindsym control+Shift+Escape exec xfce4-taskmanager;focus
 #bindsym control+Shift+Escape exec xfce4-taskmanager;focus
 
 #settings
-bindsym control+mod1+n exec xfce4-settings-manager
-#bindsym control+mod1+n exec cinnamon-settings
-#bindsym control+mod1+n exec gnome-control-center
-#bindsym control+mod1+n exec mate-control-center
-#bindsym control+mod1+n exec xfce4-settings-manager
+bindsym control+mod1+m exec xfce4-settings-manager
+#bindsym control+mod1+m exec cinnamon-settings
+#bindsym control+mod1+m exec gnome-control-center
+#bindsym control+mod1+m exec mate-control-center
+#bindsym control+mod1+m exec xfce4-settings-manager
 
 
 #workspace 2 related
