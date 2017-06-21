@@ -47,4 +47,3 @@ alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
 
 
 neofetch
-EDITOR=nano
