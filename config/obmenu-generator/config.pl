@@ -97,5 +97,5 @@ our $CONFIG = {
   "missing_icon"        => "gtk-missing-image",
   "name_keys"           => ["Name"],
   "terminal"            => "termite",
-  "VERSION"             => 0.7,
+  "VERSION"             => 0.71,
 }
