@@ -37,8 +37,8 @@ conky.config = {
 	gap_x = 10,									-- pixels between right or left border
 	gap_y = 10,									-- pixels between bottom or left border
 	minimum_height = 200,						-- minimum height of window
-	minimum_width = 230,						-- minimum height of window
-	maximum_width = 230,						-- maximum height of window
+	minimum_width = 280,						-- minimum height of window
+	maximum_width = 280,						-- maximum height of window
 
 	--Graphical
 
@@ -131,27 +131,26 @@ ${else}${cpu cpu0}${endif}${endif}%${alignr}${freq_g}${color}
 
 ${color1}${alignc}S H O R T C U T    K E Y S${color}
 ${color1}${hr}${color}
-${color1}${color2}Right-mouse click on 
-desktop to get menu${color}
-${color1}${hr}${color}
-${color1}[S]+Space${alignr}${color2}Main Menu${color}
+${color1}[S]+[Shift]+D${alignr}${color2}Main Menu${color}
 ${color1}[Alt]+F2${alignr}${color2}Alt Menu${color}
 ${color1}[Alt]+F3${alignr}${color2}Alt Menu${color}
-${color1}[S]+[Shift]+D${alignr}${color2}Alt Menu${color}
-${color1}[Ctrl]+[Space]${alignr}${color2}Alt Menu${color}
-#${color1}[S] + Tab${alignr}${color2}Client Menu${color}
+${color1}[S]+[F11]${alignr}${color2}Alt Menu${color}
+${color1}[S]+[F12]${alignr}${color2}Alt Menu${color}
 ${color1}${hr}${color}
-${color1}[S]+t${alignr}${color2}Terminal${color}
-${color1}[S]+f${alignr}${color2}File Manager${color}
-${color1}[S]+e${alignr}${color2}Editor${color}
-${color1}[S]+m${alignr}${color2}Media Player${color}
-${color1}[S]+w${alignr}${color2}Web Browser${color}
-${color1}[S]+h${alignr}${color2}Task Manager${color}
-${color1}[S]+l${alignr}${color2}Lock Screen${color}
-${color1}[S]+v${alignr}${color2}Volume Control${color}
+${color1}[S]+Enter${alignr}${color2}Terminal${color}
+${color1}[S]+[Shift]+Enter${alignr}${color2}File Manager${color}
+${color1}[S]+F1${alignr}${color2}Vivaldi${color}
+${color1}[S]+F2${alignr}${color2}Editor${color}
+${color1}[S]+F6${alignr}${color2}Media Player${color}
+${color1}[Ctrl]+[Shift]+Esc${alignr}${color2}Task Manager${color}
+${color1}[Ctrl]+[Alt]+U${alignr}${color2}Volume Control${color}
 ${color1}[PrtSc]${alignr}${color2}Screenshot${color}
 ${color1}[Ctrl]+[Alt]+m${alignr}${color2}Settings${color}
+${color1}[S]+[Shift]+R${alignr}${color2}Restart i3wm${color}
+${color1}${hr}${color}
 ${color1}[S]+Esc${alignr}${color2}Kill${color}
+${color1}[S]+[Shift]+E${alignr}${color2}Stop i3wm${color}
+${color1}[S]+[Shift]+Q${alignr}${color2}Stop application${color}
 ${color1}[S]+x${alignr}${color2}Exit${color}
 ${color1}${hr}${color}
 ${color1}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}

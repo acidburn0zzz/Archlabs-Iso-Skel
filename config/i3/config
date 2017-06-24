@@ -346,7 +346,7 @@ assign [class="Meld"]                                                           
 assign [class="Vlc|vlc"]                                                            → 6
 
 # Workspace 7 virtual machines and settings
-assign [class="Vmplayer|VirtualBox|Xfce4-settings-manager"]                         → 7
+assign [class="Vmplayer|VirtualBox"]						    → 7
 
 # Workspace 8 file managers
 assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
@@ -383,7 +383,7 @@ exec thunar
 #exec --no-startup-id evolution
 
 #Music
-exec --no-startup-id spotify
+#exec --no-startup-id spotify
 for_window [class="Spotify"] focus
 
 
@@ -400,7 +400,7 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec pamac-tray
 
 # bluetooth
-exec blueberry-tray
+#exec blueberry-tray
 
 # network
 exec --no-startup-id nm-applet
@@ -409,10 +409,10 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
 
 # dropbox
-exec dropbox start
+#exec dropbox start
 
 # insync
-exec insync start
+#exec insync start
 
 # volume
 #exec pasystray
