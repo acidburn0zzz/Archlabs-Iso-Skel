@@ -46,4 +46,10 @@ alias pksyu="packer -Syu  --noconfirm --noedit"
 alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
 
 
+shopt -s autocd # change to named directory
+shopt -s cdspell # autocorrects cd misspellings
+shopt -s cmdhist # save multi-line commands in history as single line
+shopt -s histappend # do not overwrite history
+shopt -s expand_aliases # expand aliases
+
 neofetch
