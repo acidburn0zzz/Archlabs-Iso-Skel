@@ -392,7 +392,7 @@ exec vivaldi-snapshot
 for_window [class="Vivaldi-snapshot"] focus
 
 #text-editor
-exec subl3
+exec geany
 
 #file manager
 exec thunar
@@ -506,8 +506,8 @@ bindsym control+mod1+v exec vivaldi-snapshot;workspace 1; focus
 bindsym control+mod1+g exec chromium;workspace 1;focus
 
 #workspace 2 related
-bindsym $mod+F2 exec subl3;workspace 2;focus
-bindsym control+mod1+w exec subl3;workspace 2;focus
+bindsym $mod+F2 exec geany;workspace 2;focus
+bindsym control+mod1+w exec geany;workspace 2;focus
 
 #workspace 3 related
 bindsym $mod+F3 exec inkscape;workspace 3;focus
