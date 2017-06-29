@@ -269,6 +269,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
+# qwerty/azerty issue for letter z
 bindsym $mod+s layout stacking
 bindsym $mod+z layout tabbed
 bindsym $mod+e layout toggle split
@@ -500,6 +501,7 @@ bindsym control+mod1+a exec xfce4-appfinder
 
 #workspace 1 related
 bindsym $mod+F1 exec exo-open --launch webbrowser;workspace 1;focus
+#qwerty/azerty conflict with w
 bindsym $mod+w exec exo-open --launch webbrowser;workspace 1;focus
 bindsym control+mod1+f exec firefox;workspace 1; focus
 bindsym control+mod1+v exec vivaldi-snapshot;workspace 1; focus
@@ -576,7 +578,7 @@ for_window [class="Hexchat"] floating disable
 for_window [class="Imagewriter"] floating enable
 for_window [class="Font-manager"] floating enable
 for_window [class="Nitrogen"] floating disable
-for_window [class="Pavucontrol"] floating enable
+for_window [class="Pavucontrol"] floating disable
 for_window [class="^Skype$"] floating enable
 for_window [class="^Spotify$"] floating disable
 for_window [class="System-config-printer.py"] floating enable
@@ -667,6 +669,14 @@ bindsym XF86AudioStop exec playerctl stop
 #bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 #bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 #bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+
+
+#####################################################################################################################
+#################                          xbacklight                                               #################
+#####################################################################################################################
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 
 
