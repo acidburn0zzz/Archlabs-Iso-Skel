@@ -62,7 +62,7 @@ set $right semicolon
 # use xrandr and/or arandr to know the names of your monitors
 # use this line to tell which monitor is on the right
 # xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
-exec xrandr --output HDMI2 --right-of HDMI1 --auto
+exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
 
 
 # my current setup
@@ -389,14 +389,14 @@ for_window [class="Spotify"] move to workspace 10
 # USER APPLICATIONS TO START AT BOOT
 
 #browser
-exec vivaldi-snapshot
+exec --no-startup-id vivaldi-snapshot
 for_window [class="Vivaldi-snapshot"] focus
 
 #text-editor
-exec geany
+exec --no-startup-id geany
 
 #file manager
-exec thunar
+exec --no-startup-id thunar
 #exec thunar --daemon &
 
 #Mail clients
@@ -417,10 +417,10 @@ for_window [class="Spotify"] focus
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Updater
-exec pamac-tray
+exec --no-startup-id pamac-tray
 
 # bluetooth
-#exec blueberry-tray
+#exec --no-startup-id blueberry-tray
 
 # network
 exec --no-startup-id nm-applet
@@ -429,23 +429,23 @@ exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx on
 
 # dropbox
-#exec dropbox start
+#exec --no-startup-id dropbox start
 
 # insync
-#exec insync start
+#exec --no-startup-id insync start
 
 # volume
-#exec pasystray
-exec volumeicon
+#exec --no-startup-id pasystray
+exec --no-startup-id volumeicon
 
 #variety
-exec variety
+exec --no-startup-id variety
 
 # clipit
-exec clipit
+exec --no-startup-id clipit
 
 #Conky
-exec conky -c ~/.config/i3/system-overview
+exec --no-startup-id conky -c ~/.config/i3/system-overview
 
 
 
@@ -797,7 +797,7 @@ mode "$mode_gaps_outer" {
 #####################################################################################################################
 
 #if you want transparency on non-focused windows, ...
-exec_always compton --config ~/.config/i3/compton.conf
+exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
 
 
 
