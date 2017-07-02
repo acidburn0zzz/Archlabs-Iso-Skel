@@ -148,7 +148,6 @@ ${color1}[PrtSc]${alignr}${color2}Screenshot${color}
 ${color1}[Ctrl]+[Alt]+m${alignr}${color2}Settings${color}
 ${color1}[S]+[Shift]+R${alignr}${color2}Restart i3wm${color}
 ${color1}${hr}${color}
-${color1}[S]+Esc${alignr}${color2}Kill${color}
 ${color1}[S]+[Shift]+E${alignr}${color2}Stop i3wm${color}
 ${color1}[S]+[Shift]+Q${alignr}${color2}Stop application${color}
 ${color1}[S]+x${alignr}${color2}Exit${color}
