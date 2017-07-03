@@ -32,19 +32,26 @@ urgent_on_bell = true
 #border_width = 10
 #roundness = 2.0
 
-
+############################################################
+#### You can change the color coding to your liking
+#### There is a folder themes in ~/config/termite/themes
+#### Copy/paste the colors from one of the 79+ templates to this one
+#### A backup of the original config termite is present  
+############################################################
+#### Use websites to make the terminal your own
+#### https://terminal.sexy
+#### https://critical.ch/xterm/
+############################################################
 
 [colors]
-# https://terminal.sexy
-# https://critical.ch/xterm/
 foreground      = ghost
 foreground_bold = #c5c8c6
-#foreground_dim    = 
+#foreground_dim   = 
 cursor          = #c5c8c6
 #cursor_foreground = #dcdccc
 # 20% background transparency (requires a compositor)
-background = rgba(64, 69, 82, 0.8)
-#background      = #1d1f21
+background = rgba(75, 75, 75, 0.8)
+#background = #1d1f21
 
 color0 = #3f3f3f
 color1 = #705050
