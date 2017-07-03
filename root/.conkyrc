@@ -138,7 +138,7 @@ ${color1}[S]+Space${alignr}${color2}Main Menu${color}
 ${color1}[Alt]+F2${alignr}${color2}Alt Menu${color}
 ${color1}[Alt]+F3${alignr}${color2}Alt Menu${color}
 ${color1}[S]+[Shift]+D${alignr}${color2}Alt Menu${color}
-${color1}[Ctrl]+[Space]${alignr}${color2}Alt Menu${color}
+${color1}[S]+F11${alignr}${color2}Alt Menu${color}
 #${color1}[S] + Tab${alignr}${color2}Client Menu${color}
 ${color1}${hr}${color}
 ${color1}[S]+t${alignr}${color2}Terminal${color}
