@@ -471,7 +471,7 @@ bindsym control+mod1+c exec --no-startup-id catfish;focus
 
 #slimlock
 #archlabs conflict
-#bindsym $mod+l exec slimlock
+#bindsym $mod+k exec slimlock
 #use super + X to get to slimlock
 
 #rofi theme selector
