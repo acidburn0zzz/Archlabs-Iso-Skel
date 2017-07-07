@@ -147,6 +147,7 @@ our $SCHEMA = [
     {end_cat => undef},
 
     {sep => undef},
+    {item => ["archlabs-hello", 			    'ArchLabs Hello',       	         'archlabs-hello']},
     {pipe => ['al-help-pipemenu',              'Help &amp; Resources',              'info']},
     {pipe => ['al-kb-pipemenu',                'Display Keybinds',                  'cs-keyboard']},
     ## The xscreensaver lock command
