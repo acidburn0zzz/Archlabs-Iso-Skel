@@ -26,5 +26,6 @@ EXCLUDED HERE ARE :
 - conky
 - openbox
 - tint2
+- i3
 
 They will come from there own githubs.
