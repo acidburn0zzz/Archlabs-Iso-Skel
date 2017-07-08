@@ -45,6 +45,7 @@ alias pksyu="packer -Syu  --noconfirm --noedit"
 
 alias fixpng="find . -type f -name "*.png" -exec convert {} -strip {} \;"
 
+alias fc='sudo fc-cache -fv'
 
 shopt -s autocd # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
