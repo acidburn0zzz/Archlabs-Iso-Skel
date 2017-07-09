@@ -135,14 +135,14 @@ our $SCHEMA = [
     {sep => undef},
     # obmenu-generator
     {begin_cat => ['Menu Generator', 'menu-editor']},
-	    {item => ['/usr/bin/oldmenu',          'Revert to Basic menu',              'menu-editor']},
+        {item => ['/usr/bin/oldmenu',          'Revert to Basic menu',              'menu-editor']},
         {item => ['obmenu-generator -p',       'Generate a pipe menu',              'menu-editor']},
         {item => ['obmenu-generator -s -c',    'Generate a static menu',            'menu-editor']},
         {item => ['obmenu-generator -p -i',    'Generate a pipe menu with icons',   'menu-editor']},
         {item => ['obmenu-generator -s -i -c', 'Generate a static menu with icons', 'menu-editor']},
         {sep  => undef},
         {item => ['obmenu-generator -d',       'Refresh Icon Set',                  'gtk-refresh']},
-	    {item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-source']},
+        {item => ["$editor ~/.config/obmenu-generator/schema.pl", 'Menu Schema', 'text-x-source']},
         {item => ["$editor ~/.config/obmenu-generator/config.pl", 'Menu Config', 'text-x-source']},
     {end_cat => undef},
 
