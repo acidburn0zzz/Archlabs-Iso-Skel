@@ -135,7 +135,7 @@ our $SCHEMA = [
     {sep => undef},
     # obmenu-generator
     {begin_cat => ['Menu Generator', 'menu-editor']},
-		{item => ['/usr/bin/oldmenu',       'Revert to Basic menu',                  'gmenu-editor']},
+	{item => ['/usr/bin/oldmenu',       'Revert to Basic menu',                  'gmenu-editor']},
         {item => ['obmenu-generator -p',       'Generate a pipe menu',              'menu-editor']},
         {item => ['obmenu-generator -s -c',    'Generate a static menu',            'menu-editor']},
         {item => ['obmenu-generator -p -i',    'Generate a pipe menu with icons',   'menu-editor']},
