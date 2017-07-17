@@ -28,7 +28,7 @@ require "$ENV{HOME}/.config/obmenu-generator/config.pl";
 my $editor = $CONFIG->{editor};
 
 our $SCHEMA = [
-	{sep => "ARCHLabs"},
+	{sep => "ArchLabs"},
     #          COMMAND                 LABEL                ICON
     #{item => ['xdg-open .',        'File Manager',      'file-manager']},
     #{item => ['xterm',             'Terminal',          'terminal']},
@@ -73,7 +73,7 @@ our $SCHEMA = [
 
     # Preferences
     {begin_cat => ['Preferences', 'theme']},
-        
+
         # Openbox category
         {begin_cat => ['Openbox', 'openbox']},
             {item => ["$editor ~/.config/openbox/menu.xml",     'Edit menu.xml',                 'text-xml']},
@@ -91,27 +91,27 @@ our $SCHEMA = [
         {pipe => ['al-compositor',      'Compositor',      'compton']},
         {pipe => ['al-conky-pipemenu',  'Conky',        'conky']},
         {pipe => ['al-tint2-pipemenu',  'Tint2',        'tint2']},
-        {item => ['tint2conf',          'Tint2 GUI',    'tint2conf']},        
+        {item => ['tint2conf',          'Tint2 GUI',    'tint2conf']},
         {sep => undef},
         {item => ['lxappearance',                           'Lxappearance',             'theme']},
-        {item => ['xfce4-appearance-settings',              'Xfce4 Appearance',         'preferences-desktop-theme']},        
+        {item => ['xfce4-appearance-settings',              'Xfce4 Appearance',         'preferences-desktop-theme']},
         {item => ['gksudo lightdm-gtk-greeter-settings',    'LightDM Appearance',       'theme']},
         {item => ["gksudo geany /etc/slim.conf",            'Slim Appearance',          'theme']},
-        {item => ['rofi-theme-selector',                    'Rofi Appearance',          'theme']},                 
+        {item => ['rofi-theme-selector',                    'Rofi Appearance',          'theme']},
         {item => ['geany ~/.config/termite/config',         'Termite Appearance',       'theme']},
-        {item => ["gksudo geany /etc/oblogout.conf",            'Exit Appearance',          'theme']},   
+        {item => ["gksudo geany /etc/oblogout.conf",            'Exit Appearance',          'theme']},
         {item => ['nitrogen',                               'Choose wallpaper',         'nitrogen']},
-        {sep => undef},        
+        {sep => undef},
         {item => ['xfce4-notifyd-config',                   'Notifications',            'notifications']},
-        {item => ['pavucontrol',                            'Pulseaudio Preferences',   'multimedia-volume-control']},        
-        {item => ['oomox-gui',                              'Oomox',                    'preferences-desktop-theme']},       
+        {item => ['pavucontrol',                            'Pulseaudio Preferences',   'multimedia-volume-control']},
+        {item => ['oomox-gui',                              'Oomox',                    'preferences-desktop-theme']},
         {sep => undef},
         {item => ['exo-preferred-applications',             'Preferred Applications',   'preferred-applications']},
         {item => ['xfce4-power-manager-settings',           'Power Management',         'power']},
         {item => ['xfce4-settings-manager',                 'Xfce4 Settings Manager',   'preferences-desktop']},
         {item => ["dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'", 'Dmenu', 'alacarte']},
         {item => ['arandr',                                 'Screen Layout Editor',     'display']},
-        {item => ['system-config-printer',                  'Printing',                 'printer']},        
+        {item => ['system-config-printer',                  'Printing',                 'printer']},
         #{pipe => ['al-printing-pipemenu', 'Printing', 'printer']},
     {end_cat => undef},
 
@@ -125,11 +125,11 @@ our $SCHEMA = [
         {sep => undef},
         {item => ["gksudo geany /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm.conf",  'Login Settings','login']},
         {item => ["gksudo gparted", 'GParted',                  'gparted']},
-        {sep => undef},   
+        {sep => undef},
         {item => ["gnome-disks", 			'Disks',                  				'gnome-disks']},
         {item => ["hardinfo", 				'System Profiler and Benchmark',       	'hardinfo']},
-        {item => ["xfce4-taskmanager", 		'Taskmanager',                  		'gnome-system-monitor']},                        
-    
+        {item => ["xfce4-taskmanager", 		'Taskmanager',                  		'gnome-system-monitor']},
+
     {end_cat => undef},
 
     {sep => undef},
