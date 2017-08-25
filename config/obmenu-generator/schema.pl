@@ -28,7 +28,7 @@ require "$ENV{HOME}/.config/obmenu-generator/config.pl";
 my $editor = $CONFIG->{editor};
 
 our $SCHEMA = [
-	{sep => "ArchLabs"},
+	{sep => "ARCHLabs"},
     #          COMMAND                 LABEL                ICON
     #{item => ['xdg-open .',        'File Manager',      'file-manager']},
     #{item => ['xterm',             'Terminal',          'terminal']},
@@ -145,7 +145,7 @@ our $SCHEMA = [
         {sep  => undef},
         {item => ['obmenu-generator -d',       'Refresh Icon Set',                  'gtk-refresh']},
     {end_cat => undef},
-
+	{item => ["oldmenu", 			    		'Switch Menu',       	         	'menu-editor']},
     {sep => undef},
     {item => ["archlabs-hello", 			    'ArchLabs Hello',       	         'archlabs-hello']},
     {pipe => ['al-help-pipemenu',              'Help &amp; Resources',              'info']},
